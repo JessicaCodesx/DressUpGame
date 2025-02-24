@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MainPage.css';
-import background from './assets/img/background.jpg';
+import './styles/MainPage.css';
+import background from './assets/img/backgrounds/background.jpg';
 import icon from './assets/img/icon.jpg';
 
 const MainPage = ({ startMusic }) => {
@@ -9,7 +9,7 @@ const MainPage = ({ startMusic }) => {
 
   const handlePlayClick = () => {
     startMusic(); 
-    navigate('/game'); 
+    navigate('/select'); 
   };
 
   return (
