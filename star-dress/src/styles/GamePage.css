@@ -1,5 +1,3 @@
-/* src/styles/GamePage.css */
-
 .game-page {
   background-size: cover;
   background-position: center;
@@ -7,12 +5,11 @@
   position: relative;
 }
 
-/* Photo Frame Effect */
 .photo-frame {
   border: 15px solid #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  background-color: #fafafa; /* Light background inside the frame */
+  background-color: #fafafa; 
 }
 
 .title-icon {
@@ -24,7 +21,6 @@
   height: auto;
 }
 
-/* Back Button */
 .back-button {
   position: absolute;
   top: 20px;
@@ -38,7 +34,6 @@
   cursor: pointer;
 }
 
-/* Shadow under character */
 .shadow {
   position: absolute;
   top: 75%;
@@ -50,7 +45,6 @@
   border-radius: 50%;
 }
 
-/* Base Character Image */
 .base-character {
   position: absolute;
   top: 50%;
@@ -60,7 +54,6 @@
   height: auto;
 }
 
-/* Shirt Overlay */
 .shirt-overlay {
   position: absolute;
   top: 50%;
@@ -70,7 +63,6 @@
   height: auto;
 }
 
-/* Pants Overlay Styling */
 .pants-overlay {
   position: absolute;
   top: 50%;
@@ -80,7 +72,6 @@
   height: auto;
 }
 
-/* Shoes Overlay Styling */
 .shoes-overlay {
   position: absolute;
   top: 50%;
@@ -90,7 +81,6 @@
   height: auto;
 }
 
-/* Earrings Overlay Styling */
 .earrings-overlay {
   position: absolute;
   top: 50%;
@@ -100,7 +90,6 @@
   height: auto;
 }
 
-/* Pet Overlay Styling */
 .pet-overlay {
   position: absolute;
   top: 50%;
@@ -110,7 +99,6 @@
   height: auto;
 }
 
-/* Accessory Overlay Styling */
 .accessory-overlay {
   position: absolute;
   top: 50%;
@@ -120,7 +108,6 @@
   height: auto;
 }
 
-/* Customization Buttons */
 .cycle-button {
   position: absolute;
   width: 120px;
@@ -129,7 +116,6 @@
   transition: transform 0.2s ease;
 }
 
-/* Hover effect for customization buttons */
 .cycle-button:hover {
   transform: scale(1.2);
 }
@@ -166,7 +152,6 @@
   top: 70%;
 }
 
-/* Done Button */
 .done-button {
   position: absolute;
   bottom: 60px;
@@ -183,12 +168,10 @@
   transition: transform 0.2s ease;
 }
 
-/* Hover effect for Done button */
 .done-button:hover {
-  transform: translateX(-50%) scale(1.1); /* Maintain centering while scaling */
+  transform: translateX(-50%) scale(1.1); 
 }
 
-/* Replay Button */
 .replay-button {
   position: absolute;
   bottom: 20px;
@@ -205,27 +188,23 @@
   transition: transform 0.2s ease;
 }
 
-/* Hover effect for Replay button */
 .replay-button:hover {
-  transform: translateX(-50%) scale(1.1); /* Maintain centering while scaling */
+  transform: translateX(-50%) scale(1.1); 
 }
 
-/* Clouds Animation */
 .cloud {
   position: absolute;
   opacity: 0.8;
   animation: glide 60s linear infinite;
-  width: 240px; /* Large clouds */
+  width: 240px; 
 }
 
-/* Background Clouds (slightly smaller and slower) */
 .cloudb1, .cloudb2, .cloudb3 {
   opacity: 0.5;
   animation-duration: 80s;
   width: 180px;
 }
 
-/* Default Cloud Positions (spread out vertically) */
 .cloud1 { top: 5%; left: -20%; }
 .cloud2 { top: 20%; left: -30%; }
 .cloud3 { top: 35%; left: -25%; }
@@ -234,7 +213,6 @@
 .cloudb2 { top: 45%; left: -35%; }
 .cloudb3 { top: 65%; left: -30%; }
 
-/* Position Variations for Duplicate Clouds (more vertical spacing) */
 .cloud-1 { top: 10%; animation-delay: -5s; }
 .cloud-2 { top: 25%; animation-delay: -10s; }
 .cloud-3 { top: 40%; animation-delay: -15s; }
@@ -242,26 +220,22 @@
 .cloud-5 { top: 70%; animation-delay: -25s; }
 .cloud-6 { top: 85%; animation-delay: -30s; }
 
-/* Glide Animation for Clouds (horizontal movement) */
 @keyframes glide {
   0% { left: -30%; }
   100% { left: 130%; }
 }
 
-/* Flashing Stars Animation */
 .star {
   position: absolute;
   animation: flash 1.5s ease-in-out infinite alternate;
-  width: 50px; /* Increased star size */
+  width: 50px; 
   opacity: 0.8;
 }
 
-/* Default Star Positions */
 .star1 { top: 20%; left: 30%; }
 .star2 { top: 40%; left: 60%; }
 .star3 { top: 70%; left: 45%; }
 
-/* Additional Star Positions with Randomized Placement */
 .star-1 { top: 10%; left: 25%; animation-delay: -0.5s; }
 .star-2 { top: 15%; left: 50%; animation-delay: -1s; }
 .star-3 { top: 30%; left: 70%; animation-delay: -1.5s; }
@@ -282,7 +256,6 @@
 .star-18 { top: 75%; left: 30%; animation-delay: -2.1s; }
 .star-19 { top: 40%; left: 50%; animation-delay: -4.3s; }
 
-/* Flash Animation for Stars */
 @keyframes flash {
   0% { opacity: 0; }
   100% { opacity: 1; }

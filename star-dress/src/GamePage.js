@@ -1,4 +1,3 @@
-// src/GamePage.js
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './styles/GamePage.css';
@@ -70,7 +69,6 @@ import petSwapBtn from './assets/img/buttons/petswapbtn.png';
 import shoeSwapBtn from './assets/img/buttons/shoeswapbtn.png';
 import earringSwapBtn from './assets/img/buttons/earringswapbtn.png';
 
-// Arrays for clothing and accessory items
 const shirts = [null, shirt1, shirt2, shirt3, shirt4, shirt5, shirt6, shirt7, shirt8, shirt9, shirt10];
 const pants = [null, pants1, pants2, pants3, pants4, pants5, pants6, pants7, pants8, pants9, pants10];
 const shoes = [null, shoes1, shoes2, shoes3, shoes4, shoes5, shoes6, shoes7, shoes8];
@@ -82,11 +80,9 @@ const GamePage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Determine selected character based on query parameter
   const selectedCharacter = new URLSearchParams(location.search).get('character');
   const baseCharacter = selectedCharacter === 'charactertwo' ? characterTwo : characterOne;
 
-  // State variables for selected items
   const [shirtIndex, setShirtIndex] = useState(0);
   const [pantsIndex, setPantsIndex] = useState(0);
   const [shoesIndex, setShoesIndex] = useState(0);
@@ -96,13 +92,11 @@ const GamePage = () => {
 
   const [isDone, setIsDone] = useState(false); // Tracks if "Done" is clicked
 
-  // Play sound function
   const playMouseClickSound = () => {
     const audio = new Audio(mouseClickSound);
     audio.play();
   };
 
-  // Handlers for cycling through items with sound effect
   const handleShirtCycle = () => {
     playMouseClickSound();
     setShirtIndex((prev) => (prev + 1) % shirts.length);
@@ -149,10 +143,8 @@ const GamePage = () => {
         backgroundImage: `url(${isDone ? doneBackground : gameBackground})`,
       }}
     >
-      {/* Title Icon */}
       <img src={icon} alt="Title Icon" className="title-icon" />
 
-      {/* Always render character and overlays, regardless of isDone */}
       <img src={baseCharacter} alt="Base Character" className="base-character" />
       {shirts[shirtIndex] && <img src={shirts[shirtIndex]} alt="Current Shirt" className="shirt-overlay" />}
       {pants[pantsIndex] && <img src={pants[pantsIndex]} alt="Current Pants" className="pants-overlay" />}
@@ -163,10 +155,8 @@ const GamePage = () => {
 
       {!isDone && (
         <>
-          {/* Back Button */}
           <button onClick={handleBackClick} className="back-button">BACK</button>
 
-          {/* Customization Buttons */}
           <img src={shirtSwapBtn} alt="Cycle Shirts" onClick={handleShirtCycle} className="cycle-button cycle-button-left cycle-shirts" />
           <img src={pantsSwapBtn} alt="Cycle Pants" onClick={handlePantsCycle} className="cycle-button cycle-button-left cycle-pants" />
           <img src={earringSwapBtn} alt="Cycle Earrings" onClick={handleEarringsCycle} className="cycle-button cycle-button-left cycle-earrings" />
@@ -174,14 +164,12 @@ const GamePage = () => {
           <img src={petSwapBtn} alt="Cycle Pets" onClick={handlePetsCycle} className="cycle-button cycle-button-right cycle-pets" />
           <img src={shoeSwapBtn} alt="Cycle Shoes" onClick={handleShoesCycle} className="cycle-button cycle-button-right cycle-shoes" />
 
-          {/* Done Button */}
           <button onClick={handleDoneClick} className="done-button">DONE</button>
         </>
       )}
 
       {isDone && (
         <>
-          {/* Animated Clouds */}
           {[...Array(10)].map((_, i) => (
             <React.Fragment key={i}>
               <img src={cloud1} alt="Cloud" className={`cloud cloud1 cloud-${i}`} />
@@ -193,7 +181,6 @@ const GamePage = () => {
             </React.Fragment>
           ))}
 
-          {/* Flashing Stars */}
           {[...Array(20)].map((_, i) => (
             <React.Fragment key={i}>
               <img src={star1} alt="Star" className={`star star1 star-${i}`} />
@@ -202,7 +189,6 @@ const GamePage = () => {
             </React.Fragment>
           ))}
 
-          {/* Replay Button in Photo Frame Mode */}
           <button onClick={handleReplayClick} className="replay-button">REPLAY</button>
         </>
       )}
