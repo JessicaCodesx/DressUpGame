@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DressUpGame/static/css/main.66a21df6.css",
-    "main.js": "/DressUpGame/static/js/main.abe43c26.js",
+    "main.js": "/DressUpGame/static/js/main.d00aad41.js",
     "static/js/453.b794afea.chunk.js": "/DressUpGame/static/js/453.b794afea.chunk.js",
     "static/media/background_music.mp3": "/DressUpGame/static/media/background_music.5379ffa768149974daac.mp3",
     "static/media/characterone.png": "/DressUpGame/static/media/characterone.f65fda7e70c2f9f38a5f.png",
@@ -75,11 +75,11 @@
     "static/media/camera_click.mp3": "/DressUpGame/static/media/camera_click.77b6b37324d283a89f82.mp3",
     "index.html": "/DressUpGame/index.html",
     "main.66a21df6.css.map": "/DressUpGame/static/css/main.66a21df6.css.map",
-    "main.abe43c26.js.map": "/DressUpGame/static/js/main.abe43c26.js.map",
+    "main.d00aad41.js.map": "/DressUpGame/static/js/main.d00aad41.js.map",
     "453.b794afea.chunk.js.map": "/DressUpGame/static/js/453.b794afea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.66a21df6.css",
-    "static/js/main.abe43c26.js"
+    "static/js/main.d00aad41.js"
   ]
 }
